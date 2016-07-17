@@ -102,6 +102,7 @@ void PCLViewer::InitialQVTKWindow()
 	viewer.reset(new pcl::visualization::PCLVisualizer("input viewer", false));
 	viewer->setBackgroundColor(0, 0, 0);
 	viewer->addCoordinateSystem(AXIS_SIZE);
+	viewer->initCameraParameters();
 
 	ui->qvtkWidget->SetRenderWindow(viewer->getRenderWindow());
 	viewer->setupInteractor(ui->qvtkWidget->GetInteractor(), ui->qvtkWidget->GetRenderWindow());
@@ -110,7 +111,7 @@ void PCLViewer::InitialQVTKWindow()
 	viewer_bpp.reset(new pcl::visualization::PCLVisualizer("3D viewer_bpp"));
 	viewer_bpp->setBackgroundColor(0, 0, 0);
 	viewer_bpp->setPosition(800, 0);
-	viewer_bpp->addCoordinateSystem(0.3);
+	viewer_bpp->addCoordinateSystem(AXIS_SIZE);
 	viewer_bpp->initCameraParameters();
 	viewer_bpp->addCube(0, 2, 0, 2, 0, 2, 0.0, 0.0, 1.0, "test");
 	viewer_bpp->spinOnce(100);
@@ -754,7 +755,7 @@ int PCLViewer::GetRotation()
 {
 	return GetInt(ui->in_rot);
 }
-double PCLViewer::GetTransltion()
+double PCLViewer::GetTranslation()
 {
 	return GetDouble(ui->in_pos);
 }
@@ -1243,7 +1244,9 @@ void PCLViewer::CopyEachItemSizeToArray(int total_boxes)
 void PCLViewer::ButtonResetBinPressed()
 {
 	StopTimerEvent();
-	//viewer->initCameraParameters();
+
+	viewer->initCameraParameters();
+	viewer_bpp->initCameraParameters();
 	//SetCameraPosition();
 	ClearViewer();
 }
@@ -1344,20 +1347,42 @@ void PCLViewer::ButtonApplyRotationPressed()
 }
 void PCLViewer::ButtonApplyTranslationPressed()
 {
+	double translate = GetTranslation();
+	
+	vector<pcl::visualization::Camera> cam;
+
+	viewer_bpp->getCameras(cam);
+
 	if (ui->radio_pos_x->isChecked())
 	{
 		cout << "radio_pos_x" << endl;
+		cam[0].focal[0] += translate;
+		cam[0].pos[0] += translate;
 	}
 
 	if (ui->radio_pos_y->isChecked())
 	{
 		cout << "radio_pos_y" << endl;
+		cam[0].focal[1] += translate;
+		cam[0].pos[1] += translate;
 	}
 
 	if (ui->radio_pos_z->isChecked())
 	{
 		cout << "radio_pos_z" << endl;
+		cam[0].focal[2] += translate;
+		cam[0].pos[2] += translate;
 	}
+
+	//
+	viewer_bpp->setCameraPosition(
+		cam[0].pos[0], cam[0].pos[1], cam[0].pos[2],
+		cam[0].focal[0], cam[0].focal[1], cam[0].focal[2],
+		cam[0].view[0], cam[0].view[1], cam[0].view[2]
+		);
+	
+	//viewer_bpp->updateCamera();
+	
 
 }
 
@@ -1424,13 +1449,17 @@ void PCLViewer::ClearViewer()
 
 	viewer->removeAllShapes();
 	viewer->removeAllPointClouds();
-	viewer->removePointCloud("pointcloud");
+	//viewer->removePointCloud("pointcloud");
 
 	ui->qvtkWidget->update();
 	SetCloudSize1(0);
 	//viewer->initCameraParameters();
 
 	//viewer.reset(new pcl::visualization::PCLVisualizer("viewer", false));
+
+	viewer_bpp->removeAllShapes();
+	viewer_bpp->removeAllPointClouds();
+	viewer_bpp->spinOnce(100);
 }
 
 void PCLViewer::UpdatePointcloudName(PointCloudXYZRGB::Ptr pt, string cloudname)

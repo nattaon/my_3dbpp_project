@@ -224,7 +224,7 @@ private:
 	void SetBinDepth(int size);
 
 	int GetRotation();
-	double GetTransltion();
+	double GetTranslation();
 
 };
 
