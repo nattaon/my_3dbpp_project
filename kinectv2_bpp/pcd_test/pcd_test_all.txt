@@ -1,0 +1,24 @@
+30 30 30
+11
+../pcd_test/p01.pcd
+10 16 6
+../pcd_test/p02.pcd
+16 11 6
+../pcd_test/p03.pcd
+16 11 5
+../pcd_test/p04.pcd
+17 10 6
+../pcd_test/p05.pcd
+10 16 8
+../pcd_test/p06.pcd
+23 6 5
+../pcd_test/p07.pcd
+11 19 6
+../pcd_test/p08.pcd
+12 9 4
+../pcd_test/p09.pcd
+23 6 6
+../pcd_test/p10.pcd
+21 6 7
+../pcd_test/p11.pcd
+21 4 6

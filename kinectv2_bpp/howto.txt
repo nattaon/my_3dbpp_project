@@ -1,0 +1,18 @@
+0.press connect, 
+wait for raw point cloud show(zoom in-out a bit)
+
+1.press plane segment
+it will calculate plane parameter then
+-translate to origin,
+-rotate to align on horizontal 
+-rotate to face a front direction
+remember all 3 adjustment value
+and
+translate point cloud to origin and show
+
+
+2.press extract
+show bounding box of captured object
+
+3.press (bt1) capture this
+add that box to list

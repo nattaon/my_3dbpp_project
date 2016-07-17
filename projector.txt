@@ -1,0 +1,26 @@
+//create new viewer to show packing output
+//#define USE_PROJECTOR 
+
+
+#ifdef USE_PROJECTOR
+boost::shared_ptr<pcl::visualization::PCLVisualizer> viewer_bpp(new pcl::visualization::PCLVisualizer("3D viewer_bpp"));
+#endif
+
+
+#ifdef USE_PROJECTOR
+	LoadPCDToList("../pcd_file/c_bluecookie.pcd");
+	LoadPCDToList("../pcd_file/c_bluecookie.pcd");
+	LoadPCDToList("../pcd_file/c_bluecookie.pcd");
+	LoadPCDToList("../pcd_file/c_bluecookie.pcd");
+#endif
+
+
+#ifdef USE_PROJECTOR
+	viewer_bpp->setBackgroundColor(0, 0, 0);
+	//viewer_bpp->addCoordinateSystem(1.0);
+	viewer_bpp->initCameraParameters();
+	viewer_bpp->addCube(0, 2, 0, 2, 0, 2, 0.0, 0.0, 1.0, "test");
+	viewer_bpp->spinOnce(100);
+#endif
+
+
