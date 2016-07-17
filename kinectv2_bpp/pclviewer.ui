@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>700</height>
+    <height>630</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -29,8 +29,8 @@
    <widget class="QVTKWidget" name="qvtkWidget" native="true">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>50</y>
+      <x>330</x>
+      <y>20</y>
       <width>640</width>
       <height>480</height>
      </rect>
@@ -62,29 +62,6 @@
     </property>
     <property name="text">
      <string>Passthrough Filter</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_segment">
-    <property name="geometry">
-     <rect>
-      <x>657</x>
-      <y>10</y>
-      <width>90</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Plane Segment</string>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLineEdit" name="in_passthrough_xmin">
@@ -385,31 +362,6 @@
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_12">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>10</y>
-      <width>120</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <pointsize>9</pointsize>
-      <weight>50</weight>
-      <italic>true</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Showing Cloud size</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
@@ -438,8 +390,8 @@
    <widget class="QLabel" name="a_label_cloudsize_1">
     <property name="geometry">
      <rect>
-      <x>586</x>
-      <y>10</y>
+      <x>30</x>
+      <y>120</y>
       <width>55</width>
       <height>20</height>
      </rect>
@@ -944,26 +896,6 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_clusterextract">
-    <property name="geometry">
-     <rect>
-      <x>840</x>
-      <y>10</y>
-      <width>91</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Cluster extract</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="bt_item_clearall">
     <property name="geometry">
      <rect>
@@ -1024,30 +956,10 @@
      <string>save pcd</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_bin_packing">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>570</y>
-      <width>71</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Bin packing</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="in_bin_w">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>330</x>
       <y>570</y>
       <width>30</width>
       <height>20</height>
@@ -1068,7 +980,7 @@
    <widget class="QLineEdit" name="in_bin_h">
     <property name="geometry">
      <rect>
-      <x>380</x>
+      <x>370</x>
       <y>570</y>
       <width>30</width>
       <height>20</height>
@@ -1089,7 +1001,7 @@
    <widget class="QLineEdit" name="in_bin_d">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>410</x>
       <y>570</y>
       <width>30</width>
       <height>20</height>
@@ -1110,7 +1022,7 @@
    <widget class="QLabel" name="label_28">
     <property name="geometry">
      <rect>
-      <x>340</x>
+      <x>330</x>
       <y>550</y>
       <width>111</width>
       <height>20</height>
@@ -1132,53 +1044,10 @@
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_disconnect">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>10</y>
-      <width>65</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Disconnect</string>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_animation">
-    <property name="geometry">
-     <rect>
-      <x>780</x>
-      <y>570</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Animation</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="bt_order_previous">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>740</x>
       <y>570</y>
       <width>16</width>
       <height>23</height>
@@ -1198,7 +1067,7 @@
    <widget class="QPushButton" name="bt_order_next">
     <property name="geometry">
      <rect>
-      <x>860</x>
+      <x>760</x>
       <y>570</y>
       <width>16</width>
       <height>23</height>
@@ -1396,8 +1265,8 @@
    <widget class="Line" name="line_2">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>30</y>
+      <x>320</x>
+      <y>0</y>
       <width>661</width>
       <height>20</height>
      </rect>
@@ -1454,29 +1323,6 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_connect">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>10</y>
-      <width>55</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Connect</string>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="bt_apply_1">
@@ -1568,46 +1414,6 @@
      <string>Axis</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_bin_scan">
-    <property name="geometry">
-     <rect>
-      <x>460</x>
-      <y>570</y>
-      <width>71</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Scan bin</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_capture">
-    <property name="geometry">
-     <rect>
-      <x>940</x>
-      <y>10</y>
-      <width>55</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Capture</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="bt_item_setcenter">
     <property name="geometry">
      <rect>
@@ -1646,29 +1452,6 @@
     </property>
     <property name="text">
      <string>show cloud</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_apply_plane">
-    <property name="geometry">
-     <rect>
-      <x>755</x>
-      <y>10</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Apply plane</string>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="bt_all_load">
@@ -1711,51 +1494,11 @@
      <string>save all</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="bt_save_packing">
-    <property name="geometry">
-     <rect>
-      <x>690</x>
-      <y>570</y>
-      <width>61</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>save bpp</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bt_load_packing">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>570</y>
-      <width>61</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Calibri</family>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>load bpp</string>
-    </property>
-   </widget>
    <widget class="QRadioButton" name="radio_rot_x">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>600</y>
+      <x>520</x>
+      <y>550</y>
       <width>41</width>
       <height>20</height>
      </rect>
@@ -1763,12 +1506,15 @@
     <property name="text">
      <string>x</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_rot</string>
+    </attribute>
    </widget>
    <widget class="QRadioButton" name="radio_rot_y">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>600</y>
+      <x>560</x>
+      <y>550</y>
       <width>41</width>
       <height>20</height>
      </rect>
@@ -1776,12 +1522,15 @@
     <property name="text">
      <string>y</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_rot</string>
+    </attribute>
    </widget>
    <widget class="QRadioButton" name="radio_rot_z">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>600</y>
+      <x>600</x>
+      <y>550</y>
       <width>41</width>
       <height>20</height>
      </rect>
@@ -1789,12 +1538,15 @@
     <property name="text">
      <string>z</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_rot</string>
+    </attribute>
    </widget>
    <widget class="QRadioButton" name="radio_pos_x">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>630</y>
+      <x>520</x>
+      <y>570</y>
       <width>41</width>
       <height>20</height>
      </rect>
@@ -1802,12 +1554,15 @@
     <property name="text">
      <string>x</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_pos</string>
+    </attribute>
    </widget>
    <widget class="QRadioButton" name="radio_pos_y">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>630</y>
+      <x>560</x>
+      <y>570</y>
       <width>41</width>
       <height>20</height>
      </rect>
@@ -1815,12 +1570,15 @@
     <property name="text">
      <string>y</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_pos</string>
+    </attribute>
    </widget>
    <widget class="QRadioButton" name="radio_pos_z">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>630</y>
+      <x>600</x>
+      <y>570</y>
       <width>41</width>
       <height>20</height>
      </rect>
@@ -1828,12 +1586,15 @@
     <property name="text">
      <string>z</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_pos</string>
+    </attribute>
    </widget>
    <widget class="QLabel" name="label_26">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>600</y>
+      <x>450</x>
+      <y>550</y>
       <width>70</width>
       <height>20</height>
      </rect>
@@ -1857,8 +1618,8 @@
    <widget class="QLabel" name="label_27">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>630</y>
+      <x>450</x>
+      <y>570</y>
       <width>70</width>
       <height>20</height>
      </rect>
@@ -1882,8 +1643,8 @@
    <widget class="QLineEdit" name="in_rot">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>600</y>
+      <x>640</x>
+      <y>550</y>
       <width>40</width>
       <height>20</height>
      </rect>
@@ -1903,8 +1664,8 @@
    <widget class="QLineEdit" name="in_pos">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>630</y>
+      <x>640</x>
+      <y>570</y>
       <width>40</width>
       <height>20</height>
      </rect>
@@ -1924,8 +1685,8 @@
    <widget class="QPushButton" name="bt_apply_rot">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>600</y>
+      <x>690</x>
+      <y>550</y>
       <width>40</width>
       <height>23</height>
      </rect>
@@ -1947,8 +1708,8 @@
    <widget class="QPushButton" name="bt_apply_pos">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>630</y>
+      <x>690</x>
+      <y>570</y>
       <width>40</width>
       <height>23</height>
      </rect>
@@ -2090,4 +1851,8 @@
  </customwidgets>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup_rot"/>
+  <buttongroup name="buttonGroup_pos"/>
+ </buttongroups>
 </ui>

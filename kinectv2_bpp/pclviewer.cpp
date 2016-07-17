@@ -168,6 +168,8 @@ void PCLViewer::ConnectFunctionToUi()
 	//reserve area
 	connect(ui->bt_toggle_axis, SIGNAL(clicked()), this, SLOT(ButtonToggleAxisPressed()));
 	//connect(ui->bt_bt2, SIGNAL(clicked()), this, SLOT(Button2Pressed()));
+	connect(ui->bt_apply_rot, SIGNAL(clicked()), this, SLOT(ButtonApplyRotationPressed()));
+	connect(ui->bt_apply_pos, SIGNAL(clicked()), this, SLOT(ButtonApplyTranslationPressed()));
 }
 
 void PCLViewer::ButtonConnectPressed()
@@ -748,6 +750,14 @@ void PCLViewer::SetBinDepth(int size)
 	ui->in_bin_d->setText(QString::number(size));
 }
 
+int PCLViewer::GetRotation()
+{
+	return GetInt(ui->in_rot);
+}
+double PCLViewer::GetTransltion()
+{
+	return GetDouble(ui->in_pos);
+}
 
 
 //parameter adjustment area
@@ -1311,6 +1321,43 @@ void PCLViewer::ButtonToggleAxisPressed()
 
 	is_axis_on = !is_axis_on;
 	ui->qvtkWidget->update();
+
+}
+void PCLViewer::ButtonApplyRotationPressed()
+{
+	if (ui->radio_rot_x->isChecked())
+	{
+		cout << "radio_rot_x" << endl;
+	}
+
+	if (ui->radio_rot_y->isChecked())
+	{
+		cout << "radio_rot_y" << endl;
+	}
+
+	if (ui->radio_rot_z->isChecked())
+	{
+		cout << "radio_rot_z" << endl;
+	}
+
+
+}
+void PCLViewer::ButtonApplyTranslationPressed()
+{
+	if (ui->radio_pos_x->isChecked())
+	{
+		cout << "radio_pos_x" << endl;
+	}
+
+	if (ui->radio_pos_y->isChecked())
+	{
+		cout << "radio_pos_y" << endl;
+	}
+
+	if (ui->radio_pos_z->isChecked())
+	{
+		cout << "radio_pos_z" << endl;
+	}
 
 }
 

@@ -70,6 +70,8 @@ public slots:
 
 	//reserve area
 	void ButtonToggleAxisPressed();
+	void ButtonApplyRotationPressed();
+	void ButtonApplyTranslationPressed();
 
 
 
@@ -221,6 +223,8 @@ private:
 	void SetBinHeight(int size);
 	void SetBinDepth(int size);
 
+	int GetRotation();
+	double GetTransltion();
 
 };
 
